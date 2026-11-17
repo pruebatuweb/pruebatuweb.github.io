@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corto y Cambio | Peluquería en Malasaña, Madrid</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--coal:#2a1a22;--coal2:#36232c;--oak:#c9a07e;--bulb:#ebc9ab;--stone:#f3ece8;--white:#fff;--ink:#2a1a22;--mute:#7d6b72;--rule:#e2d5d0;--display:'Bodoni Moda',Didot,Georgia,serif;--sans:'Manrope',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-size:16.5px;line-height:1.65;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--oak);outline-offset:3px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 32px}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 30px;background:var(--oak);color:var(--coal);font-weight:700;font-size:15px;text-decoration:none;border-radius:0;letter-spacing:.01em;transition:background .2s}
+.btn:hover{background:var(--bulb)}
+.btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.45)}
+.btn.ghost:hover{box-shadow:inset 0 0 0 1px #fff;background:transparent}
+.btn.dark{background:var(--coal);color:#fff}
+.btn.dark:hover{background:#000}
+
+/* ============ cabecera + portada (oscuras, como el salón) ============ */
+.dark-zone{background:var(--coal);color:#fff}
+.bar{display:flex;align-items:center;justify-content:space-between;height:84px;border-bottom:1px solid rgba(255,255,255,.1)}
+.logo{text-decoration:none;line-height:1}
+.logo b{display:block;font-family:var(--display);font-weight:400;font-size:30px;letter-spacing:.01em}
+.logo small{font-size:12px;color:rgba(255,255,255,.55);letter-spacing:.04em}
+.bar nav{display:flex;align-items:center;gap:34px;font-size:15px}
+.bar nav a{text-decoration:none;color:rgba(255,255,255,.72)}
+.bar nav a:hover{color:#fff}
+.bar .btn{height:44px;padding:0 22px}
+
+.hero{display:grid;grid-template-columns:1fr 1.15fr;gap:64px;padding:72px 0 88px;align-items:center}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(40px,4.6vw,72px);line-height:1.02;letter-spacing:-.01em;margin-bottom:28px}
+.open-sun{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:var(--bulb);margin-bottom:22px}
+.dot{width:8px;height:8px;border-radius:50%;background:#7fd18b;box-shadow:0 0 0 4px rgba(127,209,139,.18)}
+.hero p{font-size:18px;color:rgba(255,255,255,.72);max-width:28em;margin-bottom:38px}
+.hero .acts{display:flex;gap:14px;flex-wrap:wrap}
+.facts{display:flex;gap:44px;margin-top:56px;padding-top:28px;border-top:1px solid rgba(255,255,255,.12)}
+.facts div{font-size:14px;color:rgba(255,255,255,.6);line-height:1.4}
+.facts strong{display:block;font-family:var(--display);font-weight:400;font-size:34px;color:#fff;margin-bottom:4px}
+.stars{color:var(--bulb);letter-spacing:2px;font-size:13px}
+
+/* mosaico con las fotos reales del salón */
+.mosaic{display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:1fr 1fr;gap:10px;height:clamp(420px,46vw,600px)}
+.mosaic figure{overflow:hidden;background:var(--coal2)}
+.mosaic figure:first-child{grid-row:1/3}
+.mosaic img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.mosaic figure:hover img{transform:scale(1.04)}
+
+/* cinta de datos útiles */
+.ribbon{background:var(--oak);color:var(--coal)}
+.ribbon .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-top:18px;padding-bottom:18px;font-weight:600;font-size:15px}
+
+/* ============ secciones claras ============ */
+section{padding:120px 0}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(38px,4.4vw,62px);line-height:1.05;letter-spacing:-.01em}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:64px}
+.intro p{color:var(--mute);max-width:32em;font-size:17px}
+
+/* ---- especialidad: color ---- */
+.color{background:var(--stone)}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink)}
+.tier{padding:34px 34px 38px 0;border-right:1px solid var(--rule)}
+.tier+.tier{padding-left:34px}
+.tier:last-child{border-right:0}
+.tier h3{font-family:var(--display);font-weight:400;font-size:32px;margin-bottom:8px}
+.tier p{color:var(--mute);font-size:15.5px;margin-bottom:26px;min-height:76px}
+.tier dl{display:grid;grid-template-columns:1fr auto;row-gap:10px;font-size:15px}
+.tier dd{font-weight:700;text-align:right}
+.tier .from{margin-top:22px;font-size:14px;color:var(--mute)}
+
+
+/* ---- trabajos: tira de fotos reales ---- */
+.work{padding-bottom:0}
+.work .intro{margin-bottom:40px}
+.strip{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;padding:0 8px}
+.strip figure{position:relative;overflow:hidden;aspect-ratio:3/4;background:var(--coal2)}
+.strip img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.strip figure:hover img{transform:scale(1.05)}
+.strip figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;color:#fff;font-weight:600;font-size:14px;background:linear-gradient(transparent,rgba(0,0,0,.55))}
+@media (max-width:980px){.strip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:62%;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 20px}.strip figure{scroll-snap-align:start}}
+
+/* ---- carta completa con pestañas ---- */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:40px}
+.tabs button{font:600 15px var(--sans);padding:12px 20px;border:1px solid var(--rule);background:#fff;color:var(--ink);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--coal);color:#fff;border-color:var(--coal)}
+.panel{display:none;columns:2;column-gap:72px}
+.panel.on{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.panel h4{font:700 13px var(--sans);color:var(--mute);margin:0 0 6px;padding-top:6px;break-after:avoid}
+.panel ul{list-style:none;break-inside:avoid;margin-bottom:34px}
+.panel li{display:flex;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px solid var(--rule)}
+.panel li span{flex:1}
+.panel li small{color:var(--mute);font-size:13.5px;white-space:nowrap}
+.panel li b{min-width:64px;text-align:right}
+.note{color:var(--mute);font-size:14px;margin-top:8px}
+
+/* ---- opiniones ---- */
+.reviews{background:var(--coal);color:#fff}
+.reviews .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:80px;align-items:start}
+.big-quote{font-family:var(--display);font-size:clamp(32px,3.6vw,50px);line-height:1.15}
+.big-quote footer{font-family:var(--sans);font-size:15px;color:rgba(255,255,255,.6);margin-top:24px}
+.rating{display:flex;align-items:baseline;gap:16px;margin-bottom:34px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.14)}
+.rating strong{font-family:var(--display);font-weight:400;font-size:84px;line-height:.9;color:var(--bulb)}
+.rating span{color:rgba(255,255,255,.7);font-size:15px}
+.small-q{padding:22px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.small-q p{font-size:18px}
+.small-q footer{font-size:14px;color:rgba(255,255,255,.55);margin-top:6px}
+.reviews a.more{display:inline-block;margin-top:28px;color:var(--bulb);font-weight:600;text-decoration:none;border-bottom:1px solid var(--bulb)}
+
+/* ---- el salón ---- */
+.salon .grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.salon .pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.salon .pair img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.salon .pair img:last-child{margin-top:60px}
+.salon p{color:var(--mute);margin:22px 0;max-width:30em}
+.people{margin-top:34px;border-top:1px solid var(--rule)}
+.people div{display:flex;justify-content:space-between;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--rule)}
+.people b{font-family:var(--display);font-weight:400;font-size:30px}
+.people span{color:var(--mute);font-size:15px;text-align:right}
+.brands{margin-top:28px;font-size:15px;color:var(--mute)}
+.brands b{color:var(--ink)}
+
+/* ---- visita ---- */
+.visit{padding-top:0}
+.visit .box{display:grid;grid-template-columns:1fr 1.2fr;background:var(--stone)}
+.visit .info{padding:56px}
+.hours{width:100%;border-collapse:collapse;margin:20px 0 34px;font-size:16px}
+.hours td{padding:14px 0;border-bottom:1px solid var(--rule)}
+.hours td+td{text-align:right;font-weight:700}
+.hours .today td{color:#8a5a22}
+.hours .today td:first-child:after{content:" · hoy";font-weight:600}
+.where{font-size:19px;font-weight:700}
+.how{list-style:none;color:var(--mute);margin:8px 0 32px}
+.visit iframe{width:100%;height:100%;min-height:520px;border:0;display:block;filter:grayscale(1) contrast(1.05)}
+
+/* ---- pie ---- */
+.foot{background:var(--coal);color:rgba(255,255,255,.65);padding:72px 0 30px;font-size:15px}
+.foot .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.foot h5{color:#fff;font-size:14px;margin-bottom:12px}
+.foot a{color:rgba(255,255,255,.8)}
+.foot .legal{display:flex;gap:24px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.1);margin-top:56px;padding-top:24px;font-size:13.5px}
+
+/* ---- móvil ---- */
+.mbar{display:none}
+@media (max-width:980px){
+  .bar nav a:not(.btn){display:none}
+  .hero{grid-template-columns:1fr;gap:44px;padding:44px 0 56px}
+  .mosaic{height:auto;grid-template-columns:1fr 1fr;grid-template-rows:240px 140px}
+  .mosaic figure:first-child{grid-row:auto;grid-column:1/3}
+  .facts{gap:26px}
+  .facts strong{font-size:28px}
+  section{padding:84px 0}
+  .intro,.reviews .grid,.salon .grid,.visit .box{grid-template-columns:1fr;gap:36px}
+  .tiers{grid-template-columns:1fr}
+  .tier,.tier+.tier{padding:28px 0;border-right:0;border-bottom:1px solid var(--rule)}
+  .tier p{min-height:0}
+  .panel{columns:1}
+  .visit .info{padding:36px 24px}
+  .visit iframe{min-height:340px}
+  .foot .cols{grid-template-columns:1fr 1fr}
+  .mbar{display:grid;grid-template-columns:1fr 1fr 1.2fr;position:fixed;inset:auto 0 0;z-index:60;background:var(--coal);border-top:1px solid rgba(255,255,255,.12)}
+  .mbar a{color:#fff;text-align:center;padding:16px 4px;font-weight:600;font-size:15px;text-decoration:none}
+  .mbar a:last-child{background:var(--oak);color:var(--coal)}
+  body{padding-bottom:56px}
+}
+@media (max-width:540px){.wrap{padding:0 20px}.ribbon .wrap{font-size:14px}.facts{flex-wrap:wrap}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+/* ============ reserva online ============ */
+.bk-back{position:fixed;inset:0;background:rgba(20,18,16,.55);z-index:90;opacity:0;pointer-events:none;transition:opacity .25s}
+.bk{position:fixed;top:0;right:0;bottom:0;width:min(520px,100%);background:#fff;z-index:91;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.bk-open .bk-back{opacity:1;pointer-events:auto}
+.bk-open .bk{transform:none}
+.bk-open{overflow:hidden}
+.bk-head{display:flex;justify-content:space-between;align-items:center;padding:22px 28px;border-bottom:1px solid var(--rule)}
+.bk-head h3{font-family:var(--display);font-weight:400;font-size:28px}
+.bk-x{width:40px;height:40px;border:0;background:var(--stone);font-size:22px;cursor:pointer}
+.bk-steps{display:flex;gap:6px;padding:16px 28px 0}
+.bk-steps i{flex:1;height:3px;background:var(--rule)}
+.bk-steps i.on{background:var(--coal)}
+.bk-body{flex:1;overflow-y:auto;padding:22px 28px 28px}
+.bk-body h4{font:700 15px var(--sans);margin:4px 0 14px}
+.bk-sum{background:var(--stone);padding:14px 16px;margin-bottom:22px;font-size:14.5px;display:grid;gap:4px}
+.bk-sum b{font-weight:700}
+.bk-sum button{justify-self:start;background:none;border:0;color:#8a5a22;font:600 13.5px var(--sans);cursor:pointer;padding:0;text-decoration:underline}
+.bk-cat{font:700 12.5px var(--sans);color:var(--mute);margin:18px 0 6px}
+.bk-svc{display:flex;width:100%;justify-content:space-between;gap:12px;text-align:left;padding:13px 14px;border:1px solid var(--rule);background:#fff;margin-bottom:6px;cursor:pointer;font:500 15px var(--sans);color:var(--ink)}
+.bk-svc small{display:block;color:var(--mute);font-size:13px}
+.bk-svc b{white-space:nowrap}
+.bk-svc:hover{border-color:var(--coal)}
+.bk-days{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:18px}
+.bk-day{flex:0 0 66px;padding:10px 0;border:1px solid var(--rule);background:#fff;cursor:pointer;text-align:center;font:500 13px var(--sans);color:var(--ink)}
+.bk-day b{display:block;font-size:20px;font-weight:700}
+.bk-day[aria-pressed="true"]{background:var(--coal);color:#fff;border-color:var(--coal)}
+.bk-day:disabled{opacity:.35;cursor:not-allowed}
+.bk-times{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.bk-time{padding:12px 0;border:1px solid var(--rule);background:#fff;cursor:pointer;font:600 15px var(--sans);color:var(--ink)}
+.bk-time:hover{border-color:var(--coal)}
+.bk-time:disabled{background:var(--stone);color:#b9b0a8;text-decoration:line-through;cursor:not-allowed;border-color:transparent}
+.bk-part{font:700 12.5px var(--sans);color:var(--mute);grid-column:1/-1;margin-top:8px}
+.bk-empty{color:var(--mute);font-size:15px}
+.bk-form label{display:block;font-weight:600;font-size:14px;margin:14px 0 6px}
+.bk-form input,.bk-form textarea{width:100%;padding:13px 14px;border:1px solid var(--rule);font:16px var(--sans);color:var(--ink)}
+.bk-form input:focus,.bk-form textarea:focus{outline:2px solid var(--coal);outline-offset:-1px}
+.bk-legal{font-size:13px;color:var(--mute);margin-top:14px}
+.bk-foot{padding:18px 28px;border-top:1px solid var(--rule)}
+.bk-foot .btn{width:100%}
+.bk-foot .btn:disabled{opacity:.4;cursor:not-allowed}
+.bk-ok{text-align:center;padding-top:30px}
+.bk-ok .tick{width:64px;height:64px;border-radius:50%;background:var(--oak);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:30px}
+.bk-ok h4{font-family:var(--display);font-weight:400;font-size:34px;margin-bottom:10px}
+.bk-ok p{color:var(--mute);margin-bottom:6px}
+@media (max-width:540px){.bk-times{grid-template-columns:repeat(3,1fr)}.bk-head,.bk-body,.bk-foot{padding-left:20px;padding-right:20px}}
+
+
+.open-sun{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:var(--bulb);margin-bottom:22px}
+.dot{width:8px;height:8px;border-radius:50%;background:#7fd18b;box-shadow:0 0 0 4px rgba(127,209,139,.18)}
+.svc-list{list-style:none;max-width:860px}
+.svc-list li{display:grid;grid-template-columns:1fr auto auto;gap:24px;align-items:center;padding:18px 0;border-bottom:1px solid var(--rule)}
+.svc-list li span{font-size:18px;font-weight:600}
+.svc-list small{display:block;font-weight:400;color:var(--mute);font-size:14px}
+.svc-list a{font-weight:700;font-size:14px;color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--oak)}
+.demo-bar{position:sticky;top:0;z-index:80;background:var(--oak);color:var(--coal);font:600 14px var(--sans);text-align:center;padding:10px 16px}
+.demo-bar a{color:var(--coal)}
+.dark-zone .bar{position:relative}
+
+/* ============ reserva online ============ */
+.bk-back{position:fixed;inset:0;background:rgba(20,18,16,.55);z-index:90;opacity:0;pointer-events:none;transition:opacity .25s}
+.bk{position:fixed;top:0;right:0;bottom:0;width:min(520px,100%);background:#fff;z-index:91;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.bk-open .bk-back{opacity:1;pointer-events:auto}
+.bk-open .bk{transform:none}
+.bk-open{overflow:hidden}
+.bk-head{display:flex;justify-content:space-between;align-items:center;padding:22px 28px;border-bottom:1px solid var(--rule)}
+.bk-head h3{font-family:var(--display);font-weight:400;font-size:28px}
+.bk-x{width:40px;height:40px;border:0;background:var(--stone);font-size:22px;cursor:pointer}
+.bk-steps{display:flex;gap:6px;padding:16px 28px 0}
+.bk-steps i{flex:1;height:3px;background:var(--rule)}
+.bk-steps i.on{background:var(--coal)}
+.bk-body{flex:1;overflow-y:auto;padding:22px 28px 28px}
+.bk-body h4{font:700 15px var(--sans);margin:4px 0 14px}
+.bk-sum{background:var(--stone);padding:14px 16px;margin-bottom:22px;font-size:14.5px;display:grid;gap:4px}
+.bk-sum b{font-weight:700}
+.bk-sum button{justify-self:start;background:none;border:0;color:#8a5a22;font:600 13.5px var(--sans);cursor:pointer;padding:0;text-decoration:underline}
+.bk-cat{font:700 12.5px var(--sans);color:var(--mute);margin:18px 0 6px}
+.bk-svc{display:flex;width:100%;justify-content:space-between;gap:12px;text-align:left;padding:13px 14px;border:1px solid var(--rule);background:#fff;margin-bottom:6px;cursor:pointer;font:500 15px var(--sans);color:var(--ink)}
+.bk-svc small{display:block;color:var(--mute);font-size:13px}
+.bk-svc b{white-space:nowrap}
+.bk-svc:hover{border-color:var(--coal)}
+.bk-days{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:18px}
+.bk-day{flex:0 0 66px;padding:10px 0;border:1px solid var(--rule);background:#fff;cursor:pointer;text-align:center;font:500 13px var(--sans);color:var(--ink)}
+.bk-day b{display:block;font-size:20px;font-weight:700}
+.bk-day[aria-pressed="true"]{background:var(--coal);color:#fff;border-color:var(--coal)}
+.bk-day:disabled{opacity:.35;cursor:not-allowed}
+.bk-times{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.bk-time{padding:12px 0;border:1px solid var(--rule);background:#fff;cursor:pointer;font:600 15px var(--sans);color:var(--ink)}
+.bk-time:hover{border-color:var(--coal)}
+.bk-time:disabled{background:var(--stone);color:#b9b0a8;text-decoration:line-through;cursor:not-allowed;border-color:transparent}
+.bk-part{font:700 12.5px var(--sans);color:var(--mute);grid-column:1/-1;margin-top:8px}
+.bk-empty{color:var(--mute);font-size:15px}
+.bk-form label{display:block;font-weight:600;font-size:14px;margin:14px 0 6px}
+.bk-form input,.bk-form textarea{width:100%;padding:13px 14px;border:1px solid var(--rule);font:16px var(--sans);color:var(--ink)}
+.bk-form input:focus,.bk-form textarea:focus{outline:2px solid var(--coal);outline-offset:-1px}
+.bk-legal{font-size:13px;color:var(--mute);margin-top:14px}
+.bk-foot{padding:18px 28px;border-top:1px solid var(--rule)}
+.bk-foot .btn{width:100%}
+.bk-foot .btn:disabled{opacity:.4;cursor:not-allowed}
+.bk-ok{text-align:center;padding-top:30px}
+.bk-ok .tick{width:64px;height:64px;border-radius:50%;background:var(--oak);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:30px}
+.bk-ok h4{font-family:var(--display);font-weight:400;font-size:34px;margin-bottom:10px}
+.bk-ok p{color:var(--mute);margin-bottom:6px}
+@media (max-width:540px){.bk-times{grid-template-columns:repeat(3,1fr)}.bk-head,.bk-body,.bk-foot{padding-left:20px;padding-right:20px}}
+</style></head><body>
+<div class="demo-bar">Vista previa preparada por Jorge Arrizabalaga para Corto y Cambio · <a href="tel:+34679078608">679 07 86 08</a></div>
+<div class="dark-zone"><div class="wrap">
+<header class="bar"><a class="logo" href="#"><b>Corto y Cambio</b><small>Peluquería · Malasaña</small></a>
+<nav><a href="#servicios">Servicios</a><a href="#trabajos">Trabajos</a><a href="#opiniones">Opiniones</a><a href="#visita">Horario</a><a class="btn" href="#reservar" data-book>Reservar cita</a></nav></header>
+<div class="hero"><div><p class="open-sun"><span class="dot"></span>4,7 en Google · 555 reseñas</p><h1>Tu peluquería de confianza en Malasaña</h1><p>Corte, color, mechas y tratamientos con trato cercano. Elige servicio y hora libre y reserva en un minuto.</p>
+<div class="acts"><a class="btn" href="#reservar" data-book>Reservar cita online</a><a class="btn ghost" href="tel:+34915945190">Llamar al 915 94 51 90</a></div>
+<div class="facts"><div><strong>4,7</strong><span class="stars">★★★★★</span><br>555 reseñas en Google</div><div><strong>Malasaña</strong><br>Calle de San Andrés, 20</div></div></div>
+<div class="mosaic"><figure><img referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TuvpSlQDwWxk_ebx1wXQiLBp_udLQanaAvl14Y3-T8FuPAD-MpkRWFF2sYhnoQlh-cyMO2BHgodXocfexQru4HQBJ6LmczJ-gTW15crArnHwbreybiDxZIf9eZ06KgqLlxy7Xo=w1400-h1400-k-no" alt="Corto y Cambio"></figure><figure><img referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SrvSNaYSObQMy3mbzA0MVfuKCle8TmQfQT1yc9LKSg1wPwstyVz7sJc0DP98w5tyltwjSeULY6wRrnjfs7RUfHssfFh4jx-garxuSI-Cc8XTbuRsxtH9Zbpc8Vu6u-OhnJi-NNrVkBJalJ=w1200-h1200-k-no" alt="Corto y Cambio"></figure><figure><img referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Qjii6Sv-XhLCdCZ_aHoXVhsPFSOZP3PT12TtDeVm5JDBP-84r_gNQUHaRX5C8U1q_f7W7SfnqAIzYgP5YbeoPT3moPlVXbXgPnUBrHW6uYPnWgCJlp7H89S4g6EwzD35-rfSl9JA=w1200-h1200-k-no" alt="Corto y Cambio"></figure></div>
+</div></div>
+<div class="ribbon"><div class="wrap"><span>Calle de San Andrés, 20, Malasaña</span><span>Reserva online, a cualquier hora</span><span>915 94 51 90</span></div></div></div>
+<main>
+<section id="servicios"><div class="wrap"><div class="intro"><h2>Servicios</h2><p>Elige lo que quieres hacerte y reserva tu hora en un minuto.</p></div>
+<ul class="svc-list"><li><span>Corte<small>aprox. 30 min</small></span><b>Consultar</b><a href="#reservar" data-book>Reservar</a></li><li><span>Lavado y peinado<small>aprox. 45 min</small></span><b>Consultar</b><a href="#reservar" data-book>Reservar</a></li><li><span>Color y tinte<small>aprox. 1 h 30 min</small></span><b>Consultar</b><a href="#reservar" data-book>Reservar</a></li><li><span>Mechas y balayage<small>aprox. 2 h 30 min</small></span><b>Consultar</b><a href="#reservar" data-book>Reservar</a></li><li><span>Tratamiento capilar<small>aprox. 45 min</small></span><b>Consultar</b><a href="#reservar" data-book>Reservar</a></li></ul></div></section>
+<section class="work" id="trabajos"><div class="wrap"><div class="intro"><h2>Trabajos recientes</h2><p>Fotos reales del salón y de sus clientes.</p></div></div><div class="strip"><figure><img referrerpolicy="no-referrer" loading="lazy" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RK7joCuY0FRzmQhE49X7CfGR3ie_KOwlL1U4xz8aO0qvC6Gf8lSDlLO3JXZk9G3Zu5gKVn_p8AUgyKISuShI3wnxxNdroVJRXlx4ARWj1XYYmXW1xgGAAyvLaKQ7WNwQlhv5cD=w900-h900-k-no" alt="Trabajo de Corto y Cambio"></figure><figure><img referrerpolicy="no-referrer" loading="lazy" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9R9XpU9OJCgyJg0l7RcLm7egLSagm_GTbAqvAwq8i0I9Qg-9_8ScAQiBdgHNKJ1_dlxWLWCgr57TtA3F5JtmMGAs8hZVm_Tx9T3KYBz_Touq7MP6mdtqqyvCzj76gv_MKlP6DoGUw=w900-h900-k-no" alt="Trabajo de Corto y Cambio"></figure><figure><img referrerpolicy="no-referrer" loading="lazy" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SWk9-6naq9uyNZtyMv54sA65LGPDc9F5_TQcvCA03ZroPGjSk4l0L0rgFIC5kzIF0dcVJ0TNBZrlRAZq0-P8llJzbK85Yg3CR1xvf9EPyri16Vh2S-XMmSqMHkgaog8082EmwXqQ=w900-h900-k-no" alt="Trabajo de Corto y Cambio"></figure><figure><img referrerpolicy="no-referrer" loading="lazy" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QLBYypcI_hPCdwdMaOV2Ok3l1V1hhp2Al6qPx-1HKIM24evGyi5qowbPhl0bKue0Xvs-Cl-Grei-a-lmOckp9VeQyo8KWFFzU1OWksFjAPYmohaOC9yuSqVDPSuiugos0c1EeU=w900-h900-k-no" alt="Trabajo de Corto y Cambio"></figure><figure><img referrerpolicy="no-referrer" loading="lazy" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9R2J_xe4ZctcT-bnXarZhky3olGRgyzHIwxqnJSlmlwO1t--NAu5Xaj282TYll3Dd-iqmrHG5NNOHDYIGylqa583Sn19ALCOtE6S2LtT7-MEVJGXnlD19IBegj1UTEFGB6ZwAI2=w900-h900-k-no" alt="Trabajo de Corto y Cambio"></figure></div></section>
+<section class="reviews" id="opiniones"><div class="wrap grid">
+<blockquote class="big-quote">«Hace años que no salia contenta de una peluquería, y esta vez ha superado mis expectativas. El trato recibido ha sido increíble e Igor a parte de haberme hecho un corte genial, ha sido muy cercano y me ha hecho sentir muy segura en sus manos. Sin duda volveré»<footer>abril mayordomo moreno, en Google</footer></blockquote>
+<div><div class="rating"><strong>4,7</strong><span>de 5 en Google<br>con 555 reseñas</span></div><blockquote class="small-q"><p>«Fui ayer y decir que quedé encantada se queda corto. Llevaba tiempo sin ir a ninguna peluquería porque acumulé de otros salones varias decoloraciones mal trabajadas en mi underdye y me daba miedo exponerme a otro resultado insatisfactorio. Pero aquí ha sido co»</p><footer>Andrea, en Google</footer></blockquote><blockquote class="small-q"><p>«Igor, además de hacerme un corte con súper estilo y un cambio total que es justo lo que iba buscando, es un gran profesional y un gran estilista; estudia tus facciones y ve exactamente lo que te favorece y acierta! Estoy muy contenta porque por fin, he podido »</p><footer>maria dolores jimenez, en Google</footer></blockquote><blockquote class="small-q"><p>«Vine por recomendación de una amiga y me hice un corte de pelo con Mahimy. Me atendieron muy bien tanto profesionalmente como personalmente, salí con un corte medusa que me encanta y tengo claro que se ha convertido en mi peluquería de referencia»</p><footer>Iyru, en Google</footer></blockquote>
+<a class="more" href="https://www.google.com/maps/search/?api=1&query=Corto%20y%20Cambio%2C%20Calle%20de%20San%20Andr%C3%A9s%2C%2020%2C%2028004%20Madrid" target="_blank" rel="noopener">Leer todas las reseñas en Google</a></div></div></section>
+<section class="visit" id="visita" style="padding-top:120px"><div class="wrap"><div class="box"><div class="info"><h2>Ven a vernos</h2>
+<table class="hours"><tr data-d="1"><td>Lunes</td><td>10:00 – 21:00</td></tr><tr data-d="2"><td>Martes</td><td>10:00 – 21:00</td></tr><tr data-d="3"><td>Miércoles</td><td>10:00 – 21:00</td></tr><tr data-d="4"><td>Jueves</td><td>10:00 – 21:00</td></tr><tr data-d="5"><td>Viernes</td><td>10:00 – 18:00</td></tr><tr data-d="6"><td>Sábado</td><td>Cerrado</td></tr><tr data-d="0"><td>Domingo</td><td>Cerrado</td></tr></table><p class="where">Calle de San Andrés, 20 · 28004 Madrid</p><ul class="how"><li>Malasaña, Madrid</li></ul>
+<a class="btn dark" href="#reservar" data-book>Reservar cita</a></div>
+<iframe loading="lazy" title="Mapa de Corto y Cambio" src="https://maps.google.com/maps?q=Corto%20y%20Cambio%2C%20Calle%20de%20San%20Andr%C3%A9s%2C%2020%2C%2028004%20Madrid&z=16&output=embed"></iframe></div></div></section>
+</main>
+<footer class="foot"><div class="wrap"><div class="cols"><div><a class="logo" href="#" style="color:#fff"><b>Corto y Cambio</b></a></div>
+<div><h5>Dirección</h5><p>Calle de San Andrés, 20<br>28004 Madrid</p></div><div><h5>Contacto</h5><p><a href="tel:+34915945190">915 94 51 90</a></p></div><div><h5>Reservas</h5><p><a href="#reservar" data-book>Reservar online</a></p></div></div>
+<div class="legal"><span>© 2026 Corto y Cambio</span><a href="#">Aviso legal</a><a href="#">Política de privacidad</a><a href="#">Cookies</a></div></div></footer>
+<nav class="mbar" aria-label="Acciones rápidas"><a href="tel:+34915945190">Llamar</a><a href="#visita">Horario</a><a href="#reservar" data-book>Reservar</a></nav>
+<div class="bk-back" data-close></div>
+<aside class="bk" role="dialog" aria-modal="true" aria-labelledby="bk-title">
+  <div class="bk-head"><h3 id="bk-title">Reservar cita</h3><button class="bk-x" data-close aria-label="Cerrar">×</button></div>
+  <div class="bk-steps"><i></i><i></i><i></i><i></i></div>
+  <div class="bk-body" id="bk-body"></div>
+  <div class="bk-foot" id="bk-foot"></div>
+</aside>
+
+<script>
+/* ===== Configuración del salón (lo único que cambia entre webs) ===== */
+var SALON = {"nombre":"Corto y Cambio","tel":"915 94 51 90","horario":{"1":[["10:00","21:00"]],"2":[["10:00","21:00"]],"3":[["10:00","21:00"]],"4":[["10:00","21:00"]],"5":[["10:00","18:00"]]},"paso":30,"diasVista":21,ocupados:function(){return Promise.resolve([])},servicios:[["Servicios",[["Corte",30,0],["Lavado y peinado",45,0],["Color y tinte",90,0],["Mechas y balayage",150,0],["Tratamiento capilar",45,0]]]]};(function(){
+  var st={step:0,svc:null,day:null,time:null};
+  var body=document.getElementById('bk-body'),foot=document.getElementById('bk-foot');
+  var DIAS=['dom','lun','mar','mié','jue','vie','sáb'],MESES=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+  var DIAS_L=['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+  function m(t){var p=t.split(':');return +p[0]*60+ +p[1]}
+  function hhmm(n){return String(Math.floor(n/60)).padStart(2,'0')+':'+String(n%60).padStart(2,'0')}
+  function dur(n){return n<60?n+' min':Math.floor(n/60)+' h'+(n%60?' '+n%60+' min':'')}
+  function fecha(d){return DIAS_L[d.getDay()]+' '+d.getDate()+' de '+['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'][d.getMonth()]}
+  function open(){document.documentElement.classList.add('bk-open');render();setTimeout(function(){var b=body.querySelector('button');if(b)b.focus()},350)}
+  function close(){document.documentElement.classList.remove('bk-open')}
+  document.querySelectorAll('[data-book]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();open()})});
+  document.querySelectorAll('[data-close]').forEach(function(a){a.addEventListener('click',close)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  if(location.hash==='#reservar')open();
+
+  function steps(){document.querySelectorAll('.bk-steps i').forEach(function(i,k){i.classList.toggle('on',k<=st.step)})}
+  function summary(){
+    var s='';
+    if(st.svc)s+='<div><b>'+st.svc[0]+'</b> · '+dur(st.svc[1])+' · '+(st.svc[2]?st.svc[2]+' €':'precio en el salón')+'</div>';
+    if(st.day&&st.time)s+='<div>'+fecha(st.day)+', a las '+st.time+'</div>';
+    return s?'<div class="bk-sum">'+s+'<button data-back>Cambiar</button></div>':'';
+  }
+  function wireBack(){var b=body.querySelector('[data-back]');if(b)b.onclick=function(){st.step=Math.max(0,st.step-1);if(st.step===0){st.svc=null}st.time=null;render()}}
+
+  function render(){
+    steps();foot.innerHTML='';
+    if(st.step===0){
+      var h='<h4>¿Qué te quieres hacer?</h4>';
+      SALON.servicios.forEach(function(c,ci){h+='<p class="bk-cat">'+c[0]+'</p>';c[1].forEach(function(s,si){h+='<button class="bk-svc" data-s="'+ci+','+si+'"><span>'+s[0]+'<small>'+dur(s[1])+'</small></span><b>'+(s[2]?s[2]+' €':'')+'</b></button>'})});
+      body.innerHTML=h;
+      body.querySelectorAll('[data-s]').forEach(function(b){b.onclick=function(){var p=b.dataset.s.split(',');st.svc=SALON.servicios[p[0]][1][p[1]];st.step=1;render()}});
+    }
+    else if(st.step===1){
+      var today=new Date();today.setHours(0,0,0,0);
+      if(!st.day){st.day=null}
+      var d='<div class="bk-days">',first=null;
+      for(var i=0;i<SALON.diasVista;i++){var x=new Date(today);x.setDate(today.getDate()+i);var ok=!!SALON.horario[x.getDay()]&&slotsFor(x).length>0;if(ok&&!first)first=x;
+        d+='<button class="bk-day" data-d="'+x.toISOString()+'" '+(ok?'':'disabled')+' aria-pressed="false">'+DIAS[x.getDay()]+'<b>'+x.getDate()+'</b>'+MESES[x.getMonth()]+'</button>'}
+      d+='</div>';
+      if(!st.day)st.day=first;
+      body.innerHTML=summary()+'<h4>Elige día y hora</h4>'+d+'<div class="bk-times" id="bk-times"></div>';
+      wireBack();
+      body.querySelectorAll('.bk-day').forEach(function(b){if(st.day&&new Date(b.dataset.d).getTime()===st.day.getTime())b.setAttribute('aria-pressed','true');
+        b.onclick=function(){st.day=new Date(b.dataset.d);body.querySelectorAll('.bk-day').forEach(function(z){z.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');times()}});
+      times();
+    }
+    else if(st.step===2){
+      body.innerHTML=summary()+'<h4>Tus datos</h4><div class="bk-form"><label for="bk-n">Nombre</label><input id="bk-n" autocomplete="name" required><label for="bk-t">Teléfono</label><input id="bk-t" type="tel" autocomplete="tel" inputmode="tel" required><label for="bk-c">Comentario (opcional)</label><textarea id="bk-c" rows="2" placeholder="Por ejemplo: quiero un tono más claro"></textarea><p class="bk-legal">Te mandaremos la confirmación por WhatsApp. Si no puedes venir, avísanos al '+SALON.tel+'.</p></div>';
+      wireBack();
+      foot.innerHTML='<button class="btn dark" id="bk-go" disabled>Confirmar reserva</button>';
+      var n=document.getElementById('bk-n'),t=document.getElementById('bk-t'),go=document.getElementById('bk-go');
+      function chk(){go.disabled=!(n.value.trim().length>1&&t.value.replace(/\D/g,'').length>=9)}
+      n.oninput=t.oninput=chk;n.focus();
+      go.onclick=function(){st.name=n.value.trim();st.step=3;render()};
+    }
+    else{
+      body.innerHTML='<div class="bk-ok"><div class="tick">✓</div><h4>Así recibirán sus reservas tus clientes</h4><p style="margin-bottom:18px">Esto es una vista previa: la reserva se activa al contratar la web.</p><p><b>'+st.svc[0]+'</b></p><p>'+fecha(st.day)+', a las '+st.time+'</p><p>'+SALON.nombre+'</p><p style="margin-top:18px">Gracias, '+st.name.split(' ')[0]+'. En tu web real, esta cita entraría directa en tu agenda.</p></div>';
+      foot.innerHTML='<button class="btn" data-close-ok>Hecho</button>';
+      foot.querySelector('[data-close-ok]').onclick=function(){close();st={step:0,svc:null,day:null,time:null}};
+    }
+  }
+  function slotsFor(day){
+    var tr=SALON.horario[day.getDay()];if(!tr)return[];
+    var now=new Date(),out=[],len=st.svc?st.svc[1]:30;
+    tr.forEach(function(r){for(var t=m(r[0]);t+len<=m(r[1]);t+=SALON.paso){
+      var dt=new Date(day);dt.setHours(0,t,0,0);if(dt>new Date(now.getTime()+60*60000))out.push(t)}});
+    return out;
+  }
+  function times(){
+    var box=document.getElementById('bk-times');if(!st.day){box.innerHTML='<p class="bk-empty">No quedan huecos en estos días. Llámanos al '+SALON.tel+'.</p>';return}
+    var list=slotsFor(st.day);
+    SALON.ocupados(st.day).then(function(busy){
+      if(!list.length){box.innerHTML='<p class="bk-empty">Este día no quedan huecos. Prueba otro día.</p>';return}
+      var h='',last='';
+      list.forEach(function(t){var part=t<14*60?'Mañana':'Tarde';if(part!==last){h+='<p class="bk-part">'+part+'</p>';last=part}
+        var b=busy.indexOf(hhmm(t))>-1;h+='<button class="bk-time" data-t="'+hhmm(t)+'" '+(b?'disabled aria-label="'+hhmm(t)+' ocupado"':'')+'>'+hhmm(t)+'</button>'});
+      box.innerHTML=h;
+      box.querySelectorAll('.bk-time').forEach(function(b){b.onclick=function(){st.time=b.dataset.t;st.step=2;render()}});
+    });
+  }
+})();
+</script>
+
+<script>var d=String(new Date().getDay());document.querySelectorAll(".hours tr").forEach(function(r){if(r.dataset.d===d)r.classList.add("today")});</script>
+</body></html>
